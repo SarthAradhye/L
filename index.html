@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <style>
+        @font-face {
+            font-family: Heading;
+            src: url('/SellenaBrush-x3JyK.ttf');
+        }
+        @font-face {
+            font-family: LBody;
+            src: url('/Katerlin-51zjB.ttf');
+        }
+        
+        body{
+            background-image: linear-gradient(#fff,#f6606f,#f60920);
+        }
+        .content{
+            display: grid;
+            margin: 5%;
+            border: #ff0019 solid;
+            box-shadow: 1vw 1vw 1vw 1vw #ff0000;
+        }
+        img{
+            position: relative;
+            left: 38%;
+            padding-bottom: 5%;
+        }
+        h1{
+            padding-left: 2%;
+        }
+        p{
+            padding: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="font-family: Heading;font-size: 50px;">Dear Neha!</h1>
+        <p style="font-family: LBody;font-size: 2vw;">Tum mere likhe hue khaton ko padhti ho ya nahi ye mujhe nahi samjh raha iss loiye ye website banai
+            Yaaar! ! ! ! ! ! ! ! Bohot thak gaya hu Hug karo na🥹🥹🥹🥹🥹🥹. Gaaon ja raha hu lekin fir bhi workload cum nahi hai
+            17 ko hackathon hai and 15 tak project banana hai! Saral bhasha mai kahu toh lavde lage hai naraj na hona ha vo lavde kaha na.
+            par kya karu feelings hi itni strong hai jaise mera aur tumhara bond. waisi hi strong hai. Yaar kasam se ek baar mauka mil jaye waha aa ke tumhe bhaga le jaunga
+            fir tum mai aur humara sansaar. But mere maa baba ka dhyan rakhna dono yede hai sambhal lena i think tum sambhal paoge. Tum itni caring jo ho.
+            Accha ek gana bhej raha hu dono saath mai sunenge. Gana sunne ke liye image pe click karo.
+        </p>
+        
+            <img id="playButton" src="/Screenshot_20231225_191006.png" alt="" width="300" height="auto">
+            <audio id="myAudio" src="/TuHiMeri.mp3"></audio>
+    </div>
+    <script>
+        var playButton = document.getElementById('playButton');
+        var myAudio = document.getElementById('myAudio');
+    
+        playButton.addEventListener('click', function() {
+            if (myAudio.paused || myAudio.ended) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
+            playButton.innerHTML = myAudio.paused ? 'Play Song' : 'Pause Song';
+        });
+    </script>
+</body>
+</html>
